@@ -67,7 +67,7 @@ namespace ArduinoTempMonitor
                 if (chunk.Contains("T:") && chunk.Contains("H:"))
                 {
                     chunk = chunk
-                        .Replace("T:", ",")
+                        .Replace("T:", "")
                         .Replace("H:", "");
                     var split = chunk.Split(',');
                     Temperature = double.Parse(split[0]);
