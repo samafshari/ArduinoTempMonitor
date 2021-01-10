@@ -107,4 +107,5 @@ void btSend()
   ble.write(String(temp).c_str());
   ble.write(",H:");
   ble.write(String(humidity).c_str());
+  ble.write("|");
 }

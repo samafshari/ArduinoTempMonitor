@@ -54,7 +54,7 @@ namespace ArduinoTempMonitor
 
         void Parse()
         {
-            var commaIndex = lastReadBuffer.IndexOf(",");
+            var commaIndex = lastReadBuffer.IndexOf("|"); 
             if (commaIndex < 0) return;
             Parse(lastReadBuffer.Substring(0, commaIndex));
             lastReadBuffer = lastReadBuffer.Substring(commaIndex + 1, lastReadBuffer.Length - 1 - commaIndex);
