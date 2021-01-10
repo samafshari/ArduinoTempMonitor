@@ -8,7 +8,26 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-
+    <Grid Margin="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <ResourceDictionary>
+                <Style TargetType="TextBlock">
+                    <Setter Property="FontSize" Value="42" />
+                    <Setter Property="VerticalAlignment" Value="Center" />
+                </Style>
+            </ResourceDictionary>
+        </Grid.Resources>
+        <TextBlock Grid.Row="0" Grid.Column="0" HorizontalAlignment="Right" Text="Temperature:" FontWeight="Bold" />
+        <TextBlock Grid.Row="1" Grid.Column="0" HorizontalAlignment="Right" Text="Humidity:" FontWeight="Bold" />
+        <TextBlock Grid.Row="0" Grid.Column="1" HorizontalAlignment="Left" Text="{Binding FriendlyTemperature}" FontWeight="Bold" />
+        <TextBlock Grid.Row="1" Grid.Column="1" HorizontalAlignment="Left" Text="{Binding FriendlyHumidity}" FontWeight="Bold" />
     </Grid>
 </Page>
